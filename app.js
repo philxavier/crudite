@@ -8,8 +8,16 @@ $(document).ready(function () {
   //
   // });
 
-  $().on('click', function(){
+  $('.store-btn').on('click', function(event){
+    localStorage.setItem("username", "John");
+  });
 
+  $('.get-btn').on('click', function(event){
+    console.log(localStorage.getItem('username'));
+  });
+
+  $('.delete-btn').on('click', function(event){
+    console.log(localStorage.removeItem('username'));
   });
 
 });
